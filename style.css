@@ -48,7 +48,7 @@ body {
 
 /* Cores diferentes em cada sessão */
 .sessao1 {
-  background: linear-gradient(135deg, black, white);
+  background: linear-gradient(135deg, blue, white);
 }
 
 .sessao2 {
