@@ -48,15 +48,15 @@ body {
 
 /* Cores diferentes em cada sessão */
 .sessao1 {
-  background: linear-gradient(135deg, red, white);
+  background: linear-gradient(135deg, dark red, white);
 }
 
 .sessao2 {
-  background: linear-gradient(135deg, blue, white);
+  background: linear-gradient(135deg, blue, black);
 }
 
 .sessao3 {
-  background: linear-gradient(135deg, green, white);
+  background: linear-gradient(135deg, dark green, white);
 }
 
 /* Responsividade */
