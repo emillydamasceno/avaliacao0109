@@ -1,1 +1,73 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Sessões */
+.sessao {
+  padding: 50px 20px;
+  color: white;
+}
+
+.conteudo {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.conteudo h1 {
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.conteudo p, .conteudo li {
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
+/* Mídia (imagens e vídeos lado a lado) */
+.mídia {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.mídia img, .mídia iframe {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+/* Cores diferentes em cada sessão */
+.sessao1 {
+  background: linear-gradient(135deg, #ff4d4d, #990000);
+}
+
+.sessao2 {
+  background: linear-gradient(135deg, #0055ff, #001f66);
+}
+
+.sessao3 {
+  background: linear-gradient(135deg, #00b894, #004d40);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .mídia {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mídia img, .mídia iframe {
+    width: 90%;
+    height: auto;
+  }
+  }
