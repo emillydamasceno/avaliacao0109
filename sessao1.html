@@ -4,159 +4,176 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curso de Desenvolvimento de Sistemas - Detalhes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ee 100%);
-            color: #333;
-            line-height: 1.6;
+        * {
             margin: 0;
-            padding: 20px;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            padding: 0;
+            box-sizing: border-box;
         }
         
-        .pagina-secundaria {
-            max-width: 800px;
-            width: 100%;
-            margin: 20px auto;
-            padding: 40px;
-            background-color: #fff;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+            color: #2d3436;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 30px;
+        }
+        
+        header {
             text-align: center;
+            margin-bottom: 40px;
         }
         
         h1 {
-            color: #2c3e50;
-            padding-bottom: 15px;
-            margin-top: 40px;
-            font-size: 28px;
+            font-size: 2.8rem;
+            color: #2d3436;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            font-size: 2rem;
+            color: #2d3436;
+            margin: 40px 0 20px;
+            font-weight: 600;
             position: relative;
             display: inline-block;
         }
         
-        h1:after {
+        h2:after {
             content: '';
             position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
+            bottom: -8px;
+            left: 0;
+            width: 60%;
             height: 4px;
-            background: linear-gradient(90deg, #3498db, #2c3e50);
+            background: linear-gradient(90deg, #0984e3, #74b9ff);
             border-radius: 2px;
         }
         
-        h1:first-child {
-            margin-top: 0;
+        h3 {
+            font-size: 1.5rem;
+            color: #0984e3;
+            margin: 30px 0 15px;
+            font-weight: 500;
         }
         
         p {
-            margin: 20px 0;
-            font-size: 18px;
-            text-align: center;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #2d3436;
+            line-height: 1.8;
         }
         
-        ul {
-            background-color: #f8f9fa;
-            border-radius: 10px;
+        .content-block {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
             padding: 30px;
-            margin: 30px auto;
-            list-style: none;
-            max-width: 600px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-        
-        li {
-            margin: 20px 0;
-            padding: 15px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s, box-shadow 0.3s;
-            text-align: center;
-        }
-        
-        li:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        strong {
-            color: #2c3e50;
-            display: block;
-            margin-bottom: 8px;
-            font-size: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
         
         .btn-voltar {
             display: inline-block;
-            background: linear-gradient(90deg, #3498db, #2980b9);
+            background: linear-gradient(90deg, #0984e3, #74b9ff);
             color: white;
-            padding: 15px 35px;
+            padding: 14px 30px;
             text-decoration: none;
             border-radius: 50px;
             margin-top: 30px;
-            transition: all 0.3s;
-            font-weight: 600;
-            font-size: 18px;
-            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(9, 132, 227, 0.4);
         }
         
         .btn-voltar:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(52, 152, 219, 0.6);
-            background: linear-gradient(90deg, #2980b9, #3498db);
+            box-shadow: 0 8px 20px rgba(9, 132, 227, 0.6);
         }
         
-        @media (max-width: 600px) {
-            .pagina-secundaria {
-                padding: 25px;
-            }
-            
+        .topic {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed rgba(45, 52, 54, 0.1);
+        }
+        
+        .topic:last-child {
+            border-bottom: none;
+        }
+        
+        @media (max-width: 768px) {
             h1 {
-                font-size: 24px;
+                font-size: 2.2rem;
             }
             
-            p {
-                font-size: 16px;
+            h2 {
+                font-size: 1.7rem;
             }
             
-            li {
-                padding: 12px;
+            h3 {
+                font-size: 1.3rem;
             }
             
-            strong {
-                font-size: 18px;
+            .container {
+                padding: 20px 15px;
+            }
+            
+            .content-block {
+                padding: 20px;
             }
         }
     </style>
 </head>
 <body>
-    <section class="pagina-secundaria">
-        <h1>Detalhes do Curso de Desenvolvimento de Sistemas</h1>
-        <p>O curso de Desenvolvimento de Sistemas é uma formação técnica ou tecnológica que prepara profissionais para criar, projetar, implementar e manter sistemas computacionais, softwares e aplicações que resolvam problemas do mundo real.</p>
+    <div class="container">
+        <header>
+            <h1>Detalhes do Curso de Desenvolvimento de Sistemas</h1>
+        </header>
         
-        <h1>O que se estuda?</h1> 
-        <p>O currículo é focado em programação, banco de dados e engenharia de software. As disciplinas mais comuns são:</p>
+        <div class="content-block">
+            <p>O curso de Desenvolvimento de Sistemas é uma formação técnica ou tecnológica que prepara profissionais para criar, projetar, implementar e manter sistemas computacionais, softwares e aplicações que resolvam problemas do mundo real.</p>
+        </div>
         
-        <ul>
-            <li><strong>Lógica de Programação</strong>A base de tudo. Ensina a pensar como um programador, criando algoritmos para resolver problemas.</li>
-            <li><strong>Linguagens de Programação</strong>Como Java, Python, C#, JavaScript, entre outras.</li>
-            <li><strong>Banco de Dados</strong>Modelagem, SQL e administração de bancos de dados.</li>
-            <li><strong>Desenvolvimento Web</strong>HTML, CSS, JavaScript e frameworks modernos.</li>
-            <li><strong>Engenharia de Software</strong>Metodologias ágeis, versionamento e padrões de projeto.</li>
-            <li><strong>Estruturas de Dados</strong>Organização e manipulação eficiente de dados.</li>
-        </ul>
+        <h2>O que se estuda?</h2>
         
-        <a href="index.html" class="btn-voltar">Voltar à Página Principal</a>
-    </section>
+        <div class="content-block">
+            <p>O currículo é focado em programação, banco de dados e engenharia de software. As disciplinas mais comuns são:</p>
+            
+            <div class="topic">
+                <h3>Lógica de Programação</h3>
+                <p>A base de tudo. Ensina a pensar como um programador, criando algoritmos para resolver problemas.</p>
+            </div>
+            
+            <div class="topic">
+                <h3>Linguagens de Programação</h3>
+                <p>Como Java, Python, C#, JavaScript, entre outras.</p>
+            </div>
+            
+            <div class="topic">
+                <h3>Banco de Dados</h3>
+                <p>Modelagem, SQL e administração de bancos de dados.</p>
+            </div>
+            
+            <div class="topic">
+                <h3>Desenvolvimento Web</h3>
+                <p>HTML, CSS, JavaScript e frameworks modernos.</p>
+            </div>
+        </div>
+        
+        <center>
+            <a href="index.html" class="btn-voltar">Voltar à Página Principal</a>
+        </center>
+    </div>
 </body>
 </html>
