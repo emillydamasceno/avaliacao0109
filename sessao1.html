@@ -4,17 +4,158 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curso de Desenvolvimento de Sistemas - Detalhes</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ee 100%);
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .pagina-secundaria {
+            max-width: 800px;
+            width: 100%;
+            margin: 20px auto;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            padding-bottom: 15px;
+            margin-top: 40px;
+            font-size: 28px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h1:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #3498db, #2c3e50);
+            border-radius: 2px;
+        }
+        
+        h1:first-child {
+            margin-top: 0;
+        }
+        
+        p {
+            margin: 20px 0;
+            font-size: 18px;
+            text-align: center;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        ul {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 30px auto;
+            list-style: none;
+            max-width: 600px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        li {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+        
+        li:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        strong {
+            color: #2c3e50;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 20px;
+        }
+        
+        .btn-voltar {
+            display: inline-block;
+            background: linear-gradient(90deg, #3498db, #2980b9);
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 50px;
+            margin-top: 30px;
+            transition: all 0.3s;
+            font-weight: 600;
+            font-size: 18px;
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+        }
+        
+        .btn-voltar:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(52, 152, 219, 0.6);
+            background: linear-gradient(90deg, #2980b9, #3498db);
+        }
+        
+        @media (max-width: 600px) {
+            .pagina-secundaria {
+                padding: 25px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            p {
+                font-size: 16px;
+            }
+            
+            li {
+                padding: 12px;
+            }
+            
+            strong {
+                font-size: 18px;
+            }
+        }
+    </style>
 </head>
 <body>
     <section class="pagina-secundaria">
         <h1>Detalhes do Curso de Desenvolvimento de Sistemas</h1>
         <p>O curso de Desenvolvimento de Sistemas é uma formação técnica ou tecnológica que prepara profissionais para criar, projetar, implementar e manter sistemas computacionais, softwares e aplicações que resolvam problemas do mundo real.</p>
+        
         <h1>O que se estuda?</h1> 
         <p>O currículo é focado em programação, banco de dados e engenharia de software. As disciplinas mais comuns são:</p>
+        
         <ul>
-            <p><li><strong>Lógica de Programação:</strong>A base de tudo. Ensina a pensar como um programador, criando algoritmos para resolver problemas.</li></p>
+            <li><strong>Lógica de Programação</strong>A base de tudo. Ensina a pensar como um programador, criando algoritmos para resolver problemas.</li>
+            <li><strong>Linguagens de Programação</strong>Como Java, Python, C#, JavaScript, entre outras.</li>
+            <li><strong>Banco de Dados</strong>Modelagem, SQL e administração de bancos de dados.</li>
+            <li><strong>Desenvolvimento Web</strong>HTML, CSS, JavaScript e frameworks modernos.</li>
+            <li><strong>Engenharia de Software</strong>Metodologias ágeis, versionamento e padrões de projeto.</li>
+            <li><strong>Estruturas de Dados</strong>Organização e manipulação eficiente de dados.</li>
         </ul>
+        
         <a href="index.html" class="btn-voltar">Voltar à Página Principal</a>
     </section>
 </body>
